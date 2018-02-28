@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+<RuntimeFrameworkVersion>2.0.5</RuntimeFrameworkVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Business\" />
+    <Folder Include="Interfaces\Data\" />
+    <Folder Include="Interfaces\Data\Abstract\" />
+    <Folder Include="Interfaces\Business\Abstract\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Abstract\" />
+    <Folder Include="Interfaces\Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Interfaces\Service\Abstract\IAbstractController.config" />
+  </ItemGroup>
+</Project>
