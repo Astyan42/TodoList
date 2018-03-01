@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DomainObject.Interfaces.Business;
 using DomainObject.Interfaces.Data;
 using DomainObject.Models.Abstract;
+using Microsoft.Extensions.Logging;
 
 namespace Business.Abstract
 {
@@ -10,10 +11,12 @@ namespace Business.Abstract
     {
 
         protected readonly TR _repository;
+        protected readonly ILogger _logger;
 
-        public AbstractHandler(TR repository)
+        public AbstractHandler(TR repository, ILogger logger)
         {
             _repository = repository;
+            _logger = logger;
         }
 
         public virtual T Create(T item)
